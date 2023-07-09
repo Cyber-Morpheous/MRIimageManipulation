@@ -1,0 +1,81 @@
+The Software Development
+
+Create a user interface of your choosing that has at least:
+
+1. A menu on start (in the terminal) describing the possible choices to interact with the image set. Ex
+
+Press the following to:
+
+Q: Move one image up
+
+W: Move one image down
+
+E: Decrease brightness
+
+R: Increase brightness
+
+You can use the opencv function to show the images in a window.
+
+2. A key press (or input of your choice) that allows you to read a file that contains data of your MRI files (a metafile). and show the image on an openCV window. This file will have the following structure:
+
+Number of files <number>
+
+Image1.xxx
+
+Image2.xxx
+
+Image3.xxx
+
+Software System and GUI for Creating an MRI Image Dataset
+
+Visualization System
+
+Introduction
+
+This project will allow you to practice your programming constructs (new, arrays, and pointers), practice writing functions in a simple class form, and develop an interface for your system. You will also practice how to write good reports.
+
+• Your programming must be of high quality with good variable names, function names, and commenting. It should look artistic.
+
+。 It is recommended to try and use a Class to organize all the functionality
+
+• You will use the terminal (user input) and also OpenCV (vision processing library) to construct your program. An introduction and a how to install the library on your system and the user guide to opencv are linked here:
+
+https://medium.com/@subwaymatch/adding-opencv-4-2-0-to- visual-studio-2019-project-in-windows-using-pre-built-binaries- 93a851ed6141
+
+https://docs.opencv.org/2.4/doc/user_guide/user_guide.html
+
+Extra Credit 10%: Create a GUI with the same functionality as above, use a slider to move through the MRI scanned pictures and to adjust the brightness and contrast. Add a button as well for filtering an image and saving all images as slightly different file names.
+
+Image data sets: mridata.zip mrinoise.png
+
+Here is a console application that uses mrinoise.png, puts some lines on it and displays it.
+
+OpenCVTest.cpp
+
+Example file:
+
+Number of files 5
+
+image/mri1.png
+
+image/mri2.png
+
+image/mri3.png
+
+image/mri4.png
+
+image/mri5.png
+
+3. Each of the files listed in the metafile will be read in first as an array of file names (dynamically allocated) to an array of image file pointer or vector (also dynamically allocated).
+
+4. You will then have a key press that allows you to display each of the images in an opencv window alongside your terminal (One key to travese in order through the images going forwards and backwards Ex. Key press to load images and show first image, then User can press Wto move from mri1 to mri2 then mri2 to mri3 then the user can press Q to move from mri3 to mri2 to navigate backwards).
+
+5. In addition, you will have four more buttons, one for brightness (Increase/Decrease) and one for contrast (Increase/Decrease), that will allow you to change these values for each of the images.
+
+6. You will then create a median filter and key press to activate the median filter (do not use any built-in functions). This filter will use a 3x3 pixel window and traverse the image to reduce noise (e.g., salt and pepper noise) in the image. A noisy image is provided. The process will be explained in class.
+
+7. You will also have a key press function to save all the files back with slightly new names.
+
+
+
+C:/Users/Ahmed/projects/freelancing/MRIimageManipulation/MetaData.txt
